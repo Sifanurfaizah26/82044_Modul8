@@ -12,19 +12,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import ac.id.umn.sifanurfaizah.studentapp.ui.theme.StudentAppTheme
+import com.google.firebase.FirebaseApp
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState:
+                          Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        FirebaseApp.initializeApp(this)
         setContent {
-            StudentAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            MaterialTheme {
+                StudentRegistrationScreen()
             }
         }
     }
