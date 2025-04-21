@@ -12,7 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import ac.id.umn.sifanurfaizah.studentapp.ui.theme.StudentAppTheme
+import androidx.compose.material3.MaterialTheme
 import com.google.firebase.FirebaseApp
+import android.util.Log
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState:
@@ -25,21 +27,5 @@ class MainActivity : ComponentActivity() {
                 StudentRegistrationScreen()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    StudentAppTheme {
-        Greeting("Android")
     }
 }
